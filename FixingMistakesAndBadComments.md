@@ -9,11 +9,11 @@ source [Corey Schafer Tutorial](https://www.youtube.com/watch?v=FdZecVxzJbk&list
 * Second criterial, where we have done chnages in a file.
   * ``git add -A``
   * ```git status ``` wil show the file which was ready for commit. However we have made a bad commit. 
-  * `` git commit -m " bad commit"``. How we will change the commit message without making another commit. ``git commit --ammend -m " Again good commit"``. Now if we want to see the ``git log`` we will see that only Again good commit is available.
+  * `` git commit -m " bad commit"``. How we will change the commit message without making another commit. ``git commit --amend -m " Again good commit"``. Now if we want to see the ``git log`` we will see that only Again good commit is available.
   * however we need to consider that this is only for local changes, if we already pushed our code outside world, then we should do it another way, becuase the hash already changed, which causes the history change in git. So for remote repository maybe it can cause error
 
   * Let say we accendently forgot to commit some file. For example we have added a .gitignore file. We have added to staging area. ``git add -A``. We want to commit at last. 
-  If we do ``git commit --ammend`` it will open all of our commits in editor, where we can change commit message if we want. We actually don't want to change something right now. Now if we do ``git log --stat`` we will see that, .gitignore file is actually now a part of the last commit. If we do ``git branch`` we will see that there in another branch. Actually we have done al our chages to master branch. Actually we wanted to do that in another branch. So we want to change our last commit to another_branch and master branch will be like previous
+  If we do ``git commit --amend`` it will open all of our commits in editor, where we can change commit message if we want. We actually don't want to change something right now. Now if we do ``git log --stat`` we will see that, .gitignore file is actually now a part of the last commit. If we do ``git branch`` we will see that there in another branch. Actually we have done al our chages to master branch. Actually we wanted to do that in another branch. So we want to change our last commit to another_branch and master branch will be like previous
 
 # Wrong branch Commit
     * ``git log`` we will pick the hash of last commit(full hash not necesarry 6/7 is enough). Copy this hash part.
